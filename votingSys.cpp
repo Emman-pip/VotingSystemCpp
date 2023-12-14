@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdlib.h> 
+#include <typeinfo>
 
 using namespace std;
 
@@ -260,8 +261,9 @@ public:
     {
         Interface UI;
         string pres = "pres";
+        
         int choice = UI.welcome();
-
+        
         switch (choice)
         {
         case 1:
@@ -277,10 +279,6 @@ public:
         case 4:
             cout << "Thank you for using the Student Voting System\n" << endl;
             condition = false;
-            break;
-        default:
-            cout << "Please choose an appropriate option." << endl;
-            sleep(2);
             break;
         }
     }
